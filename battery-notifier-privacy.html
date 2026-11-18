@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Battery Notifier ([dvd/tech])</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #121211;
+      color: #EDE8DF;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #1C1B19;
+      border: 1px solid #2E2B27;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    h1 { font-size: 1.75rem; margin-bottom: 6px; }
+    h2 { font-size: 1.2rem; margin-top: 26px; margin-bottom: 8px; color: #22A06B; }
+    p, li { color: #D5CFC4; font-size: 0.96rem; }
+    ul { padding-left: 22px; margin-bottom: 12px; }
+    .meta { color: #9E978D; font-size: 0.88rem; margin-bottom: 24px; }
+    a { color: #22A06B; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy — Battery Notifier</h1>
+    <div class="meta">Package ID: <code>com.personal.batterynotifier</code> · Developer: [dvd/tech] (Dawit Derebie) · Effective Date: November 18, 2026</div>
+
+    <p><strong>Battery Notifier</strong> ("the App") is developed and published by <strong>[dvd/tech]</strong>. The App monitors your device's battery percentage, charging status, voltage, and temperature locally on your device to announce customizable spoken voice and notification alerts.</p>
+
+    <h2>1. Battery Telemetry & Local Processing</h2>
+    <ul>
+      <li><strong>100% On-Device Processing:</strong> All battery readings (percentage, charging current in mA, temperature in °C, voltage, and health status) are read from standard Android system broadcasts (<code>ACTION_BATTERY_CHANGED</code>) and processed strictly on your device.</li>
+      <li><strong>No Personal Data Collection:</strong> We do not collect, transmit, or store your battery usage history, personal identity, contacts, or location on any external server.</li>
+      <li><strong>Spoken Alerts (TTS):</strong> Voice announcements use Android's built-in on-device Text-to-Speech engine.</li>
+    </ul>
+
+    <h2>2. Permissions Used</h2>
+    <ul>
+      <li><code>FOREGROUND_SERVICE</code> &amp; <code>POST_NOTIFICATIONS</code>: Used to keep battery threshold monitoring reliable in the background and deliver low-battery, charge-target, and overheat alerts.</li>
+      <li><code>RECEIVE_BOOT_COMPLETED</code>: Used to automatically resume battery monitoring after your phone restarts if monitoring was enabled.</li>
+      <li><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code>: Optional user-initiated setting so aggressive OEM battery savers do not kill spoken charge alerts while your screen is off.</li>
+    </ul>
+
+    <h2>3. Advertising & Third-Party SDKs (Google AdMob)</h2>
+    <p>To keep the App free, we display a muted banner advertisement using the <strong>Google Mobile Ads SDK (AdMob)</strong>. Google AdMob may automatically collect and process:</p>
+    <ul>
+      <li>Device identifiers (such as the Android Advertising ID / <code>AD_ID</code>)</li>
+      <li>Coarse IP-based location, device model, OS version, and ad interaction metrics (impressions and clicks)</li>
+      <li>Diagnostic crash/performance data related to ad delivery</li>
+    </ul>
+    <p>You can reset or delete your Advertising ID at any time in your Android device's <em>Settings &rarr; Google &rarr; Ads</em>. Learn more about how Google handles data at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's Privacy &amp; Terms</a>.</p>
+
+    <h2>4. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:dvdtech.apps@gmail.com">dvdtech.apps@gmail.com</a>.</p>
+  </div>
+</body>
+</html>
