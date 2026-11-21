@@ -82,12 +82,13 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <span>&copy; 2026 [dvd/tech] &middot; Dawit Derebie</span>
+      <span>&copy; <span id="current-year">2026</span> [dvd/tech] &middot; Dawit Derebie</span>
       <div class="footer-links">
         <a href="/">Home</a>
         <a href="mailto:dvdtech.apps@gmail.com">dvdtech.apps@gmail.com</a>
       </div>
     </div>
   </footer>
+  <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

@@ -465,7 +465,8 @@ body {
 
 .footer-links {
   display: flex;
-  gap: 18px;
+  flex-wrap: wrap;
+  gap: 12px 18px;
 }
 
 .footer-links a {
@@ -477,9 +478,42 @@ body {
   color: var(--text);
 }
 
-@media (max-width: 600px) {
-  .brand-sub { display: none; }
+.doc-content {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (max-width: 720px) {
+  .container { padding: 0 18px; }
   .hero { padding: 44px 0 36px; }
-  .app-card { flex-direction: column; gap: 14px; padding: 20px; }
+  .section { padding: 36px 0; }
+  .app-card { padding: 20px; gap: 16px; }
+  .principles-grid { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+}
+
+@media (max-width: 540px) {
+  .site-header { padding: 14px 0; }
+  .header-inner { gap: 10px; }
+  .brand-sub { display: none; }
+  .nav-actions { gap: 12px; }
+  .nav-link { font-size: 0.82rem; }
+  .hero { padding: 32px 0 28px; }
+  .hero h1 { font-size: 1.55rem; }
+  .hero p { font-size: 0.94rem; }
+  .app-card { flex-direction: column; gap: 14px; padding: 18px; }
   .app-icon { width: 52px; height: 52px; }
+  .app-meta { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .spec-list { gap: 8px 12px; }
+  .doc-wrapper { padding: 32px 0 48px; }
+  .doc-header { flex-direction: column; align-items: flex-start; gap: 12px; padding-bottom: 18px; }
+  .doc-header h1 { font-size: 1.32rem; }
+  .summary-box { padding: 14px 16px; }
+}
+
+@media (max-width: 380px) {
+  .container { padding: 0 14px; }
+  .nav-actions { gap: 10px; }
+  .brand-mark { font-size: 0.86rem; padding: 3px 8px; }
+  .app-title-group { flex-direction: column; align-items: flex-start; gap: 6px; }
 }
