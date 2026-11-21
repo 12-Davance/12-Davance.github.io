@@ -340,7 +340,9 @@ body {
 
 /* Legal / Privacy Document Layout */
 .doc-wrapper {
-  padding: 48px 0 64px;
+  max-width: 760px;
+  padding-top: 48px;
+  padding-bottom: 64px;
 }
 
 .breadcrumb {
@@ -505,7 +507,7 @@ body {
   .app-icon { width: 52px; height: 52px; }
   .app-meta { flex-direction: column; align-items: flex-start; gap: 10px; }
   .spec-list { gap: 8px 12px; }
-  .doc-wrapper { padding: 32px 0 48px; }
+  .doc-wrapper { padding-top: 32px; padding-bottom: 48px; }
   .doc-header { flex-direction: column; align-items: flex-start; gap: 12px; padding-bottom: 18px; }
   .doc-header h1 { font-size: 1.32rem; }
   .summary-box { padding: 14px 16px; }
