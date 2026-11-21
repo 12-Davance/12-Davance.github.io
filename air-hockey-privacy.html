@@ -3,59 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Air Hockey ([dvd/tech])</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #121211;
-      color: #EDE8DF;
-      line-height: 1.7;
-      padding: 40px 20px;
+  <title>Privacy Policy — Air Hockey · [dvd/tech]</title>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('dvdtech_theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+    function toggleTheme() {
+      var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', cur);
+      localStorage.setItem('dvdtech_theme', cur);
     }
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      background: #1C1B19;
-      border: 1px solid #2E2B27;
-      border-radius: 16px;
-      padding: 32px;
-    }
-    h1 { font-size: 1.75rem; margin-bottom: 6px; }
-    h2 { font-size: 1.2rem; margin-top: 26px; margin-bottom: 8px; color: #2878E8; }
-    p, li { color: #D5CFC4; font-size: 0.96rem; }
-    ul { padding-left: 22px; margin-bottom: 12px; }
-    .meta { color: #9E978D; font-size: 0.88rem; margin-bottom: 24px; }
-    a { color: #2878E8; }
-  </style>
+  </script>
 </head>
 <body>
-  <div class="container">
-    <h1>Privacy Policy — Air Hockey</h1>
-    <div class="meta">Package ID: <code>com.personal.airhockey</code> · Developer: [dvd/tech] (Dawit Derebie) · Effective Date: November 18, 2026</div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand-link">
+        <span class="brand-mark">[dvd/tech]</span>
+        <span class="brand-sub">Privacy Documentation</span>
+      </a>
+      <nav class="nav-actions">
+        <a href="/" class="nav-link">All Apps</a>
+        <a href="mailto:dvdtech.apps@gmail.com" class="nav-link">Support</a>
+        <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle color theme" title="Toggle Light/Dark Theme">&#9680;</button>
+      </nav>
+    </div>
+  </header>
 
-    <p><strong>Air Hockey</strong> ("the Game") is developed and published by <strong>[dvd/tech]</strong>. The Game provides single-player AI matches, two-player pass-and-play on a single screen, and local Wi-Fi / Personal Hotspot multiplayer matches.</p>
+  <main class="container doc-wrapper">
+    <a href="/" class="breadcrumb">&larr; Back to [dvd/tech]</a>
 
-    <h2>1. Local Wi-Fi Multiplayer & Game Data</h2>
-    <ul>
-      <li><strong>No Accounts Required:</strong> You do not need to create an account or sign in to play any mode of the Game.</li>
-      <li><strong>Local Wi-Fi &amp; Hotspot Discovery:</strong> When you play a Wi-Fi match, your device communicates puck and mallet coordinates directly with the opponent's device over your local Wi-Fi network or Personal Hotspot using UDP/TCP sockets. No gameplay traffic is routed through external servers.</li>
-      <li><strong>Optional In-App Feedback:</strong> If you choose to submit a message using the in-app Feedback form, your message text, optional contact field, and basic device model/OS version are transmitted to the developer solely to respond to your feedback or bug report.</li>
-    </ul>
+    <div class="doc-header">
+      <img src="/assets/air-hockey-icon.png" alt="Air Hockey">
+      <div>
+        <h1>Air Hockey — Privacy Policy</h1>
+        <div class="doc-sub">Package ID: com.personal.airhockey &middot; Effective Date: November 18, 2026</div>
+      </div>
+    </div>
 
-    <h2>2. Advertising & Third-Party SDKs (Google AdMob)</h2>
-    <p>To keep the Game free, we display a muted banner advertisement using the <strong>Google Mobile Ads SDK (AdMob)</strong>. Google AdMob may automatically collect and process:</p>
-    <ul>
-      <li>Device identifiers (such as the Android Advertising ID / <code>AD_ID</code>)</li>
-      <li>Coarse IP-based location, device model, OS version, and ad interaction metrics (impressions and clicks)</li>
-      <li>Diagnostic crash/performance data related to ad delivery</li>
-    </ul>
-    <p>You can reset or delete your Advertising ID at any time in your Android device's <em>Settings &rarr; Google &rarr; Ads</em>. Learn more about how Google handles data at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's Privacy &amp; Terms</a>.</p>
+    <div class="summary-box">
+      <div class="summary-label">Privacy Summary</div>
+      <p>Air Hockey requires no user accounts or sign-ins. Local Wi-Fi and Personal Hotspot multiplayer matches exchange puck and mallet coordinates directly between devices on your local network without routing gameplay through external servers.</p>
+    </div>
 
-    <h2>3. Local Storage</h2>
-    <p>Game settings (such as AI difficulty, target goals, sound/vibration toggles, and dark/light rink theme) are stored locally on your device via Android <code>SharedPreferences</code> and are deleted automatically if you uninstall the Game.</p>
+    <div class="doc-content">
+      <h2>1. Gameplay &amp; Local Wi-Fi Multiplayer</h2>
+      <ul>
+        <li><strong>No Account Required:</strong> You can play all single-player, two-player pass-and-play, and local Wi-Fi multiplayer modes without creating an account or providing personal information.</li>
+        <li><strong>Local Network Discovery:</strong> During a Wi-Fi match, your device communicates puck and mallet positions directly with your opponent's device over your local Wi-Fi router or Personal Hotspot via local UDP/TCP sockets.</li>
+        <li><strong>Optional In-App Feedback:</strong> If you voluntarily submit a message through the in-app Feedback form, your message text, optional contact field, and basic device model/OS version are sent to the developer solely to address your feedback.</li>
+      </ul>
 
-    <h2>4. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:dvdtech.apps@gmail.com">dvdtech.apps@gmail.com</a>.</p>
-  </div>
+      <h2>2. Advertising &amp; Third-Party SDKs (Google AdMob)</h2>
+      <p>To support development while keeping the game free, a muted banner advertisement is displayed using the <strong>Google Mobile Ads SDK (AdMob)</strong>. Google AdMob may automatically collect and process:</p>
+      <ul>
+        <li>Device identifiers (such as the Android Advertising ID / <code>AD_ID</code>)</li>
+        <li>Coarse IP-based location, device model, OS version, and ad interaction metrics (impressions and clicks)</li>
+        <li>Diagnostic crash and performance telemetry related to ad delivery</li>
+      </ul>
+      <p>You can reset or delete your Advertising ID at any time in your Android device's <em>Settings &rarr; Google &rarr; Ads</em>. For full details on how Google processes data, refer to <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's Privacy &amp; Terms</a>.</p>
+
+      <h2>3. Local Preferences</h2>
+      <p>Game preferences (AI difficulty, target score, sound and haptic settings, and dark/light table theme) are saved locally on your device using Android <code>SharedPreferences</code> and are removed automatically if the game is uninstalled.</p>
+
+      <h2>4. Contact</h2>
+      <p>For questions regarding this Privacy Policy, contact <a href="mailto:dvdtech.apps@gmail.com">dvdtech.apps@gmail.com</a>.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 [dvd/tech] &middot; Dawit Derebie</span>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="mailto:dvdtech.apps@gmail.com">dvdtech.apps@gmail.com</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

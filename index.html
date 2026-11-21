@@ -3,112 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[dvd/tech] — Mobile Apps & Privacy Policies</title>
-  <style>
-    :root {
-      --bg: #121211;
-      --card: #1C1B19;
-      --border: #2E2B27;
-      --text: #EDE8DF;
-      --subtle: #9E978D;
-      --accent: #C87A4B;
-      --blue: #2878E8;
-      --green: #22A06B;
+  <title>[dvd/tech] — Independent Android Software Studio</title>
+  <meta name="description" content="Thoughtful, local-first utilities and arcade games for Android by [dvd/tech].">
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('dvdtech_theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', saved);
+      } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+    function toggleTheme() {
+      var cur = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', cur);
+      localStorage.setItem('dvdtech_theme', cur);
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding: 48px 20px;
-    }
-    .container { max-width: 820px; margin: 0 auto; }
-    .brand {
-      display: inline-block;
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      font-weight: 700;
-      font-size: 1.4rem;
-      color: var(--accent);
-      margin-bottom: 12px;
-      letter-spacing: 0.5px;
-    }
-    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
-    p.lead { color: var(--subtle); font-size: 1.05rem; margin-bottom: 36px; }
-    .grid { display: grid; gap: 18px; margin-bottom: 40px; }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .card h2 { font-size: 1.25rem; font-weight: 700; }
-    .card p { color: var(--subtle); font-size: 0.95rem; }
-    .links { display: flex; gap: 12px; margin-top: 6px; flex-wrap: wrap; }
-    a.btn {
-      display: inline-block;
-      padding: 8px 16px;
-      border-radius: 10px;
-      background: var(--border);
-      color: var(--text);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: opacity 0.15s;
-    }
-    a.btn:hover { opacity: 0.85; }
-    footer {
-      border-top: 1px solid var(--border);
-      padding-top: 24px;
-      color: var(--subtle);
-      font-size: 0.9rem;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    footer a { color: var(--accent); text-decoration: none; }
-  </style>
+  </script>
 </head>
 <body>
-  <div class="container">
-    <div class="brand">[dvd/tech]</div>
-    <h1>Crafted Android Utilities & Arcade Games</h1>
-    <p class="lead">Fast, local-first Android applications designed with privacy and simplicity at the core.</p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand-link">
+        <span class="brand-mark">[dvd/tech]</span>
+        <span class="brand-sub">Software Studio</span>
+      </a>
+      <nav class="nav-actions">
+        <a href="#applications" class="nav-link">Applications</a>
+        <a href="#principles" class="nav-link">Approach</a>
+        <a href="mailto:dvdtech.apps@gmail.com" class="nav-link">Contact</a>
+        <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle color theme" title="Toggle Light/Dark Theme">&#9680;</button>
+      </nav>
+    </div>
+  </header>
 
-    <div class="grid">
-      <div class="card">
-        <h2>Baby Monitor (`com.personal.babymonitor`)</h2>
-        <p>Local Wi-Fi &amp; Personal Hotspot live video &amp; two-way audio baby monitor with soothing white noise and cry detection. Zero cloud servers—video and audio stay strictly on your local network.</p>
-        <div class="links">
-          <a class="btn" href="/baby-monitor-privacy.html">Privacy Policy</a>
-        </div>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-eyebrow">Independent Android Engineering</div>
+      <h1>Thoughtful, local-first software built for everyday reliability.</h1>
+      <p>We design focused Android utilities and tactile arcade games that work directly on your hardware and local network—without mandatory user accounts, cloud subscriptions, or unnecessary complexity.</p>
+    </section>
+
+    <section id="applications" class="section">
+      <div class="section-header">
+        <span class="section-title">Published Applications</span>
       </div>
 
-      <div class="card">
-        <h2>Battery Notifier (`com.personal.batterynotifier`)</h2>
-        <p>Customizable spoken voice and notification alerts for low battery, charge longevity targets (80%), overheat protection, and charger plug/unplug events.</p>
-        <div class="links">
-          <a class="btn" href="/battery-notifier-privacy.html">Privacy Policy</a>
+      <div class="app-list">
+        <article class="app-card">
+          <img class="app-icon" src="/assets/baby-monitor-icon.png" alt="Baby Monitor Icon">
+          <div class="app-body">
+            <div class="app-top">
+              <div class="app-title-group">
+                <h2 class="app-name">Baby Monitor</h2>
+                <span class="app-tag">Utility &middot; Parenting</span>
+              </div>
+            </div>
+            <p class="app-desc">Turns two Android devices into a private, peer-to-peer live video and two-way audio baby monitor over local Wi-Fi or Personal Hotspot. Includes remote soothing white noise, configurable cry-detection thresholds, and dark-nursery display dimming.</p>
+            <div class="app-meta">
+              <ul class="spec-list">
+                <li>100% Local Socket Stream</li>
+                <li>Live Camera &amp; Push-to-Talk</li>
+                <li>No Cloud Servers</li>
+              </ul>
+              <a class="policy-link" href="/baby-monitor-privacy.html">Privacy Policy &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <img class="app-icon" src="/assets/battery-notifier-icon.png" alt="Battery Notifier Icon">
+          <div class="app-body">
+            <div class="app-top">
+              <div class="app-title-group">
+                <h2 class="app-name">Battery Notifier</h2>
+                <span class="app-tag">Utility &middot; System</span>
+              </div>
+            </div>
+            <p class="app-desc">Protects long-term battery health with spoken Text-to-Speech (TTS) announcements and threshold notifications for 80% charge longevity targets, low-battery warnings, and thermal overheat limits, paired with a live mA current and voltage dashboard.</p>
+            <div class="app-meta">
+              <ul class="spec-list">
+                <li>On-Device TTS Voice Alerts</li>
+                <li>80% Charge Target &amp; Thermal Guard</li>
+                <li>Silent-Mode Aware</li>
+              </ul>
+              <a class="policy-link" href="/battery-notifier-privacy.html">Privacy Policy &rarr;</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="app-card">
+          <img class="app-icon" src="/assets/air-hockey-icon.png" alt="Air Hockey Icon">
+          <div class="app-body">
+            <div class="app-top">
+              <div class="app-title-group">
+                <h2 class="app-name">Air Hockey</h2>
+                <span class="app-tag">Game &middot; Arcade</span>
+              </div>
+            </div>
+            <p class="app-desc">Responsive 60fps arcade air hockey featuring sub-stepped puck and mallet collision physics, four single-player AI difficulty tiers, same-device two-player pass-and-play, and zero-lag local Wi-Fi and Personal Hotspot multiplayer duels.</p>
+            <div class="app-meta">
+              <ul class="spec-list">
+                <li>1P AI, 2P &amp; Local Wi-Fi</li>
+                <li>60Hz Sub-Stepped Physics</li>
+                <li>Dark &amp; Classic Ivory Tables</li>
+              </ul>
+              <a class="policy-link" href="/air-hockey-privacy.html">Privacy Policy &rarr;</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="principles" class="section" style="padding-top: 8px;">
+      <div class="section-header">
+        <span class="section-title">Design Principles</span>
+      </div>
+      <div class="principles-grid">
+        <div class="principle-card">
+          <h3>Local-First Architecture</h3>
+          <p>Device-to-device features communicate directly over your local Wi-Fi router or Personal Hotspot rather than routing private streams through external servers.</p>
+        </div>
+        <div class="principle-card">
+          <h3>Zero Account Friction</h3>
+          <p>Every application launches straight into its core workspace—no sign-up walls, email registrations, or cloud profile tracking.</p>
+        </div>
+        <div class="principle-card">
+          <h3>Tactile &amp; Restrained UI</h3>
+          <p>Calm, high-contrast interfaces with adaptive dark and warm-ivory palettes engineered for legibility and low battery overhead.</p>
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="card">
-        <h2>Air Hockey (`com.personal.airhockey`)</h2>
-        <p>60fps arcade air hockey featuring 1-Player AI difficulty modes, 2-Player pass-and-play on one device, and instant local Wi-Fi / Hotspot multiplayer duels.</p>
-        <div class="links">
-          <a class="btn" href="/air-hockey-privacy.html">Privacy Policy</a>
-        </div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>&copy; 2026 [dvd/tech] &middot; Dawit Derebie</span>
+      <div class="footer-links">
+        <a href="mailto:dvdtech.apps@gmail.com">dvdtech.apps@gmail.com</a>
+        <a href="/baby-monitor-privacy.html">Baby Monitor Privacy</a>
+        <a href="/battery-notifier-privacy.html">Battery Notifier Privacy</a>
+        <a href="/air-hockey-privacy.html">Air Hockey Privacy</a>
       </div>
     </div>
-
-    <footer>
-      <span>&copy; 2026 [dvd/tech] (Dawit Derebie). All rights reserved.</span>
-      <span>Support: <a href="mailto:dvdtech.apps@gmail.com">dvdtech.apps@gmail.com</a> · <a href="/app-ads.txt">app-ads.txt</a></span>
-    </footer>
-  </div>
+  </footer>
 </body>
 </html>
